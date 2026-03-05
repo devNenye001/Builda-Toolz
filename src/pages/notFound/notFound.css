@@ -1,0 +1,68 @@
+.not-found-wrapper {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, sans-serif;
+  text-align: center;
+}
+
+.not-found-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.icon-box {
+  padding: 15px 18px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.question-mark {
+font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+/* Button - strictly no box-shadow */
+.go-home-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 48px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+
+.go-home-btn:focus-visible {
+  outline: 2px solid #2b6cff;
+  outline-offset: 2px;
+}

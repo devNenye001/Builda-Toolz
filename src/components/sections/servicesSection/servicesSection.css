@@ -1,0 +1,150 @@
+.services-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Content Styles */
+.services-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  color: #2b6cff;
+  font-size: 18px;
+}
+
+.services-info h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500; /* Medium weight as requested */
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.highlight {
+  color: #2b6cff;
+}
+
+.learn-more-btn, .learn-more-btn2 {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.learn-more-btn2 {
+  display: none;
+}
+
+
+
+/* Right Content: Service Cards */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.service-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper {
+  background-color: #2b6cff;
+  color: #fff;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.card-text h3 {
+  font-size: 20px;
+  font-weight: 500; /* Medium weight */
+  margin: 0 0 8px 0;
+  color: #000;
+}
+
+.card-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .services-info {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .service-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .learn-more-btn {
+        display: none;
+  }
+
+    .learn-more-btn2 {
+        display: block;
+        width: 100%;
+          background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+    }
+
+}

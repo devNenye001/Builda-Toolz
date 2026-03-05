@@ -1,0 +1,93 @@
+import React, { useState } from 'react';
+import { motion as Motion, AnimatePresence } from "framer-motion";
+import { FiChevronRight, FiStar } from "react-icons/fi";
+import './testimonialSection.css';
+
+const testimonials = [
+  {
+    id: 1,
+    name: 'Chinedu P.',
+    image: '/test.svg', // Replace with your image path
+    text: '“Customer service is top-notch. They explained everything before repairing my phone.”',
+    rating: 4,
+  },
+  {
+    id: 2,
+    name: 'Sarah A.',
+    image: '/test.svg',
+    text: '“Highly professional team. They helped me find the perfect land for my dream home without any stress.”',
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: 'Tunde O.',
+    image: '/test.svg',
+    text: '“The construction quality is unmatched. I was kept informed through every stage of the build.”',
+    rating: 5,
+  }
+];
+
+const TestimonialSection = () => {
+  const [index, setIndex] = useState(0);
+
+  const nextSlide = () => {
+    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <section className="testimonial-section">
+      <div className="testimonial-header">
+        <span className="subtitle"><span className="dot">•</span> Testimonials</span>
+        <h2>Real Feedback from <br /> our <span className="blue">satisfied</span> clients</h2>
+      </div>
+
+      <div className="carousel-container">
+        <AnimatePresence mode="wait">
+          <Motion.div 
+            key={testimonials[index].id}
+            className="testimonial-card"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <div className="client-image-wrapper">
+              <img src={testimonials[index].image} alt={testimonials[index].name} />
+            </div>
+
+            <div className="client-content">
+              <p className="testimonial-text">{testimonials[index].text}</p>
+              <h4 className="client-name">{testimonials[index].name}</h4>
+              <div className="star-rating">
+                {[...Array(5)].map((_, i) => (
+                  <FiStar 
+                    key={i} 
+                    className={i < testimonials[index].rating ? "star filled" : "star"} 
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Carousel Navigation Button */}
+            <button className="next-btn" onClick={nextSlide} aria-label="Next Testimonial">
+              <FiChevronRight />
+            </button>
+          </Motion.div>
+        </AnimatePresence>
+
+        {/* Pagination Dots */}
+        <div className="pagination">
+          {testimonials.map((_, i) => (
+            <div 
+              key={i} 
+              className={`dot-indicator ${i === index ? 'active' : ''}`}
+              onClick={() => setIndex(i)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialSection;

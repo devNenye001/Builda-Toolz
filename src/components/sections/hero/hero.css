@@ -1,0 +1,90 @@
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-text-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  letter-spacing: -4%;
+}
+
+.highlight-blue {
+  color: #2b6cff;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+/* Button - strictly flat, no shadow */
+.explore-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+
+.desktop-break {
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 40px 15px;
+  }
+  
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-text-content h1 {
+    margin-bottom: 24px;
+  }
+
+  .hero-image {
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+  }
+
+  .explore-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-content h1 {
+    font-size: 1.75rem;
+  }
+}
