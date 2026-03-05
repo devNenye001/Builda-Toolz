@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-import './PropertySection.css';
+import './propertySection.css';
 import PropertyCard from '../../propertyCard/propertyCard';
 
 // Mock data to demonstrate the carousel

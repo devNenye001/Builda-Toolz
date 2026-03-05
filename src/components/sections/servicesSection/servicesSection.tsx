@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion as Motion, type Variants } from "framer-motion";
 import { FiMapPin, FiHome, FiTool } from "react-icons/fi"; // Using React Icons
-import './ServicesSection.css';
+import './servicesSection.css';
 
 const services = [
   {

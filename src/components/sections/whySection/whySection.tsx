@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion as Motion, type Variants } from "framer-motion";
 import { FiDollarSign, FiUserCheck, FiUsers } from "react-icons/fi";
-import './WhySection.css';
+import './whySection.css';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },

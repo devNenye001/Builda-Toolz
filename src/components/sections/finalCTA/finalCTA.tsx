@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion as Motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import './FinalCTA.css';
+import './finalCTA.css';
 
 const containerVariants = {
   hidden: { opacity: 0, scale: 0.95 },
