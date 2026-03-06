@@ -34,15 +34,15 @@ const PropertySection = () => {
   };
 
   return (
-    <section className="property-section">
-      <div className="section-header">
-        <div className="header-text">
-          <span className="subtitle"><span className="dot">•</span> Featured Properties</span>
-          <h2>Explore our <span className="highlight">exclusive</span> listings</h2>
+    <section className="property-section3">
+      <div className="section-header3">
+        <div className="header-text3">
+          <span className="subtitle3"><span className="dot3">•</span> Featured Properties</span>
+          <h2>Explore our <span className="highlight3">exclusive</span> listings</h2>
         </div>
         
         {/* Navigation Controls */}
-        <div className="carousel-controls">
+        <div className="carousel-controls3">
           <button 
             className={`nav-arrow ${index === 0 ? 'disabled' : ''}`} 
             onClick={prevProperty}
@@ -60,14 +60,14 @@ const PropertySection = () => {
         </div>
       </div>
 
-      <div className="carousel-viewport" ref={carouselRef}>
+      <div className="carousel-viewport3" ref={carouselRef}>
         <Motion.div 
-          className="carousel-track"
+          className="carousel-track3"
           animate={{ x: `calc(-${index * (150)}px)` }} 
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
           {propertyData.map((item) => (
-            <div className="card-wrapper" key={item.id}>
+            <div className="card-wrapper3" key={item.id}>
               <PropertyCard {...item} />
             </div>
           ))}

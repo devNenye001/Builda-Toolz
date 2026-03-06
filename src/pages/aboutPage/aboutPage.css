@@ -1,0 +1,142 @@
+.about-page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  overflow-x: hidden;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-header h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  color: #000;
+}
+
+/* Video Styling */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.about-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.play-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid #000;
+  margin-left: 5px;
+}
+
+.about-intro-text {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.about-intro-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Certifications & Compliance Section */
+.cert-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cert-content h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.cert-content p {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.cert-image-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #eee; /* Light border instead of shadow */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cert-image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+/* Button & Link Reset - No Shadows */
+button, .btn {
+  box-shadow: none !important;
+  outline: none;
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  .about-page-container {
+    padding: 20px 15px;
+  }
+
+  .video-container {
+    border-radius: 16px;
+  }
+
+  .play-overlay {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cert-section {
+    padding: 40px 0;
+  }
+}

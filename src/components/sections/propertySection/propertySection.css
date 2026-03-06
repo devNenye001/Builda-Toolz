@@ -1,19 +1,19 @@
-.property-section {
+.property-section3 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 60px 30px;
   overflow: hidden; /* Clips the carousel overflow */
 }
 
-.section-header {
+.section-header3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 48px;
 }
 
-.header-text h2 {
+.header-text3 h2 {
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 500; /* Medium weight */
   color: #000;
@@ -21,7 +21,7 @@
   letter-spacing: -1%;
 }
 
-.subtitle {
+.subtitle3 {
   font-size: 14px;
   color: #555;
   display: flex;
@@ -29,11 +29,11 @@
   gap: 8px;
 }
 
-.dot { color: #2b6cff; font-size: 18px; }
-.highlight { color: #2b6cff; }
+.dot3 { color: #2b6cff; font-size: 18px; }
+.highlight3 { color: #2b6cff; }
 
 /* Carousel Controls - Strictly no box shadows */
-.carousel-controls {
+.carousel-controls3 {
   display: flex;
   gap: 12px;
 }
@@ -64,7 +64,7 @@
 }
 
 /* Track and Viewport */
-.carousel-viewport {
+.carousel-viewport3 {
   width: 100%;
   cursor: grab;
 }
@@ -73,18 +73,18 @@
   cursor: grabbing;
 }
 
-.carousel-track {
+.carousel-track3 {
   display: flex;
   gap: 24px; /* Space between cards */
   will-change: transform;
 }
 
-.card-wrapper {
+.card-wrapper3 {
   flex: 0 0 380px;   /* Prevent flex grow/shrink */
   width: 380px;      /* Lock width */
 }
 
-.carousel-viewport {
+.carousel-viewport3 {
   width: 100%;
   overflow-x: auto; /* THIS must be here */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
@@ -92,18 +92,18 @@
 
 /* Responsiveness */
 @media (max-width: 768px) {
-  .section-header {
+  .section-header3 {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
   }
 
   /* Adjust track animation for mobile width */
-  .carousel-track {
+  .carousel-track3 {
     animation: none; /* Usually better to allow native scroll on mobile or adjust calc */
   }
 
-  .card-wrapper {
+  .card-wrapper3 {
       flex: 0 0 280px; 
     width: 200px;
   }

@@ -1,17 +1,17 @@
-.why-section {
+.why-section2 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 60px 30px;
   text-align: center;
   background-color: #fff;
 }
 
-.why-header {
+.why-header2 {
   margin-bottom: 80px;
 }
 
-.subtitle {
+.subtitle2 {
   font-size: 14px;
   color: #555;
   display: flex;
@@ -21,12 +21,12 @@
   margin-bottom: 16px;
 }
 
-.dot {
+.dot2 {
   color: #2b6cff;
   font-size: 18px;
 }
 
-.why-header h2 {
+.why-header2 h2 {
   font-size: clamp(24px, 4vw, 42px);
   font-weight: 500; /* As requested: bold is 500 */
   line-height: 1.3;
@@ -34,17 +34,17 @@
   letter-spacing: -0.01em;
 }
 
-.blue {
+.blue2 {
   color: #2b6cff;
 }
 
-.reasons-grid {
+.reasons-grid2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
-.reason-card {
+.reason-card2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -53,7 +53,7 @@
   transition: transform 0.3s ease;
 }
 
-.icon-box {
+.icon-box2 {
   width: 56px;
   height: 56px;
   background-color: #2b6cff;
@@ -66,14 +66,14 @@
   margin-bottom: 24px;
 }
 
-.reason-card h3 {
+.reason-card2 h3 {
   font-size: 20px;
   font-weight: 500; /* As requested */
   color: #000;
   margin: 0 0 12px 0;
 }
 
-.reason-card p {
+.reason-card2 p {
   font-size: 16px;
   line-height: 1.6;
   color: #666;
@@ -82,27 +82,27 @@
 
 /* Responsive Logic */
 @media (max-width: 992px) {
-  .reasons-grid {
+  .reasons-grid2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .desktop-only {
+  .desktop-only2 {
     display: none;
   }
   
-  .why-section {
+  .why-section2 {
     padding: 60px 20px;
   }
 
-  .why-header h2 {
+  .why-header2 h2 {
     font-size: 28px;
   }
 }
 
 @media (max-width: 600px) {
-  .reasons-grid {
+  .reasons-grid2 {
     grid-template-columns: 1fr;
     gap: 48px;
   }

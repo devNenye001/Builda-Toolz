@@ -47,11 +47,11 @@ const cardVariants: Variants = {
 
 const ServicesSection = () => {
   return (
-    <section className="services-section">
-      <div className="services-grid">
+    <section className="services-section2">
+      <div className="services-grid2">
         {/* Left Column: Heading & CTA */}
         <Motion.div 
-          className="services-info"
+          className="services-info2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -71,7 +71,7 @@ const ServicesSection = () => {
 
         {/* Right Column: Service Cards */}
         <Motion.div 
-          className="services-list"
+          className="services-list2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -80,11 +80,11 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Motion.div 
               key={index} 
-              className="service-card"
+              className="service-card2"
               variants={cardVariants}
               whileHover={{ x: 10 }}
             >
-              <div className="icon-wrapper">
+              <div className="icon-wrapper2">
                 {service.icon}
               </div>
               <div className="card-text">

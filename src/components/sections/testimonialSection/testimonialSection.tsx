@@ -35,30 +35,30 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="testimonial-section">
-      <div className="testimonial-header">
+    <section className="testimonial-section4">
+      <div className="testimonial-header4">
         <span className="subtitle"><span className="dot">•</span> Testimonials</span>
         <h2>Real Feedback from <br /> our <span className="blue">satisfied</span> clients</h2>
       </div>
 
-      <div className="carousel-container">
+      <div className="carousel-container4">
         <AnimatePresence mode="wait">
           <Motion.div 
             key={testimonials[index].id}
-            className="testimonial-card"
+            className="testimonial-card4"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <div className="client-image-wrapper">
+            <div className="client-image-wrapper4">
               <img src={testimonials[index].image} alt={testimonials[index].name} />
             </div>
 
-            <div className="client-content">
-              <p className="testimonial-text">{testimonials[index].text}</p>
-              <h4 className="client-name">{testimonials[index].name}</h4>
-              <div className="star-rating">
+            <div className="client-content4">
+              <p className="testimonial-text4">{testimonials[index].text}</p>
+              <h4 className="client-name4">{testimonials[index].name}</h4>
+              <div className="star-rating4">
                 {[...Array(5)].map((_, i) => (
                   <FiStar 
                     key={i} 
@@ -69,14 +69,14 @@ const TestimonialSection = () => {
             </div>
 
             {/* Carousel Navigation Button */}
-            <button className="next-btn" onClick={nextSlide} aria-label="Next Testimonial">
+            <button className="next-btn4" onClick={nextSlide} aria-label="Next Testimonial">
               <FiChevronRight />
             </button>
           </Motion.div>
         </AnimatePresence>
 
         {/* Pagination Dots */}
-        <div className="pagination">
+        <div className="pagination4">
           {testimonials.map((_, i) => (
             <div 
               key={i} 

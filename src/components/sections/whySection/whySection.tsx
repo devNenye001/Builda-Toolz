@@ -42,22 +42,22 @@ const WhySection = () => {
   ];
 
   return (
-    <section className="why-section">
+    <section className="why-section2">
       <Motion.div 
-        className="why-header"
+        className="why-header2"
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <span className="subtitle"><span className="dot">•</span> Why Choose Us</span>
+        <span className="subtitle2"><span className="dot2">•</span> Why Choose Us</span>
         <h2>
-          Building is more than construction <br className="desktop-only" />
-          — it’s <span className="blue">trust</span>, <span className="blue">quality</span>, and <span className="blue">vision</span>
+          Building is more than construction <br className="desktop-only2" />
+          — it’s <span className="blue2">trust</span>, <span className="blue2">quality</span>, and <span className="blue2">vision</span>
         </h2>
       </Motion.div>
 
       <Motion.div 
-        className="reasons-grid"
+        className="reasons-grid2"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -66,11 +66,11 @@ const WhySection = () => {
         {reasons.map((reason, index) => (
           <Motion.div 
             key={index} 
-            className="reason-card" 
+            className="reason-card2" 
             variants={itemVariants}
             whileHover={{ y: -8 }}
           >
-            <div className="icon-box">
+            <div className="icon-box2">
               {reason.icon}
             </div>
             <h3>{reason.title}</h3>
