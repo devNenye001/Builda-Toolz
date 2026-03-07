@@ -78,7 +78,7 @@ const ServicesSection = () => {
           variants={staggerContainer}
         >
           {services.map((service, index) => (
-            <Motion.div 
+            <Motion.div
               key={index} 
               className="service-card2"
               variants={cardVariants}

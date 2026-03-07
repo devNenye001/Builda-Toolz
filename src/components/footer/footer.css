@@ -77,6 +77,10 @@
   line-height: 1.5;
 }
 
+.contact-item{
+  margin-bottom: -20px;
+}
+
 .footer-icon {
   color: #2500f8; /* Red pin color from screenshot */
   font-size: 18px;

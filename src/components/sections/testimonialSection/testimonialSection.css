@@ -115,16 +115,20 @@
 .dot-indicator4 {
   width: 8px;
   height: 8px;
-  background-color: #ddd;
+  background-color: #dcdcdc;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.dot-indicator.active {
+.dot-indicator4.active {
   background-color: #2b6cff;
   width: 24px;
   border-radius: 10px;
+}
+
+.testimonial-text4{
+  color: #ffffff;
 }
 
 /* Responsive Logic */

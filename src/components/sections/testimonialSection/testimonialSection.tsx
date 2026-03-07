@@ -37,8 +37,8 @@ const TestimonialSection = () => {
   return (
     <section className="testimonial-section4">
       <div className="testimonial-header4">
-        <span className="subtitle"><span className="dot">•</span> Testimonials</span>
-        <h2>Real Feedback from <br /> our <span className="blue">satisfied</span> clients</h2>
+        <span className="subtitle4"><span className="dot4">•</span> Testimonials</span>
+        <h2>Real Feedback from <br /> our <span className="blue4">satisfied</span> clients</h2>
       </div>
 
       <div className="carousel-container4">
@@ -54,7 +54,6 @@ const TestimonialSection = () => {
             <div className="client-image-wrapper4">
               <img src={testimonials[index].image} alt={testimonials[index].name} />
             </div>
-
             <div className="client-content4">
               <p className="testimonial-text4">{testimonials[index].text}</p>
               <h4 className="client-name4">{testimonials[index].name}</h4>
@@ -62,7 +61,7 @@ const TestimonialSection = () => {
                 {[...Array(5)].map((_, i) => (
                   <FiStar 
                     key={i} 
-                    className={i < testimonials[index].rating ? "star filled" : "star"} 
+                    className={i < testimonials[index].rating ? "star filled4" : "star4"} 
                   />
                 ))}
               </div>
@@ -80,7 +79,7 @@ const TestimonialSection = () => {
           {testimonials.map((_, i) => (
             <div 
               key={i} 
-              className={`dot-indicator ${i === index ? 'active' : ''}`}
+              className={`dot-indicator4 ${i === index ? 'active' : ''}`}
               onClick={() => setIndex(i)}
             />
           ))}

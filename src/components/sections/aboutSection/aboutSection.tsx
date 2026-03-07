@@ -27,23 +27,23 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="about-section">
+    <section className="about-section2">
       <Motion.div 
-        className="about-header"
+        className="about-header2"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <div className="about-title-side">
-          <Motion.span className="subtitle" variants={fadeUp}>
-            <span className="dot">•</span> About Us
+        <div className="about-title-side2">
+          <Motion.span className="subtitle2" variants={fadeUp}>
+            <span className="dot2">•</span> About Us
           </Motion.span>
           <Motion.h2 variants={fadeUp}>
             Get to know more <br /> about Builda Toolz
           </Motion.h2>
         </div>
         
-        <Motion.div className="about-text-side" variants={fadeUp}>
+        <Motion.div className="about-text-side2" variants={fadeUp}>
           <p>
             Builda Toolz is a full-service real estate and construction company 
             delivering end-to-end building solutions. From land acquisition and 
@@ -54,7 +54,7 @@ const AboutSection = () => {
       </Motion.div>
 
       <Motion.div 
-        className="video-container"
+        className="video-container2"
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -72,8 +72,8 @@ const AboutSection = () => {
         </video>
 
         {!isPlaying && (
-          <button className="play-overlay" onClick={togglePlay} aria-label="Play Video">
-            <div className="play-icon"></div>
+          <button className="play-overlay2" onClick={togglePlay} aria-label="Play Video">
+            <div className="play-icon2"></div>
           </button>
         )}
       </Motion.div>
