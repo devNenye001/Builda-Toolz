@@ -6,22 +6,22 @@ import './testimonialSection.css';
 const testimonials = [
   {
     id: 1,
-    name: 'Chinedu P.',
-    image: '/test.svg', // Replace with your image path
+    name: 'Yahaya M.',
+    image: '/musa.jpg', // Replace with your image path
     text: '“Customer service is top-notch. They explained everything before repairing my phone.”',
     rating: 4,
   },
   {
     id: 2,
     name: 'Sarah A.',
-    image: '/test.svg',
+    image: '/sarah.jpg',
     text: '“Highly professional team. They helped me find the perfect land for my dream home without any stress.”',
     rating: 5,
   },
   {
     id: 3,
     name: 'Tunde O.',
-    image: '/test.svg',
+    image: '/tunde.jpg',
     text: '“The construction quality is unmatched. I was kept informed through every stage of the build.”',
     rating: 5,
   }
