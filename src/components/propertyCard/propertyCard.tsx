@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion as Motion } from "framer-motion";
-import {FiWind, FiMaximize } from "react-icons/fi"; // Using Feather icons
-import './propertyCard.css';
-import { FaBed } from 'react-icons/fa';
+import { FiWind, FiMaximize } from "react-icons/fi"; // Using Feather icons
+import "./propertyCard.css";
+import { FaBed } from "react-icons/fa";
 
 interface PropertyProps {
   id: string | number;
@@ -10,7 +11,7 @@ interface PropertyProps {
   price: string;
   title: string;
   location: string;
-  statusTag?: 'For Rent' | 'For Sale'; // Optional tag
+  statusTag?: "For Rent" | "For Sale"; // Optional tag
   amenities?: {
     beds?: number;
     baths?: number;
@@ -18,17 +19,24 @@ interface PropertyProps {
   };
 }
 
-const PropertyCard: React.FC<PropertyProps> = ({ 
-  id, image, price, title, location, statusTag, amenities 
+const PropertyCard: React.FC<PropertyProps> = ({
+  id,
+  image,
+  price,
+  title,
+  location,
+  statusTag,
+  amenities,
 }) => {
-  
+  const navigate = useNavigate();
+
   const handleNavigation = () => {
     // Navigates to the specific property details page
-    window.location.href = `/properties/${id}`;
+    navigate(`/properties/${id}`);
   };
 
   return (
-    <Motion.div 
+    <Motion.div
       className="property-card"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -39,11 +47,7 @@ const PropertyCard: React.FC<PropertyProps> = ({
       <div className="image-container">
         <img src={image} alt={title} className="property-img" />
         {/* Optional Status Tag */}
-        {statusTag && (
-          <div className="status-tag">
-            {statusTag}
-          </div>
-        )}
+        {statusTag && <div className="status-tag">{statusTag}</div>}
       </div>
 
       <div className="property-details">
@@ -72,7 +76,7 @@ const PropertyCard: React.FC<PropertyProps> = ({
           </div>
         )}
 
-        <Motion.button 
+        <Motion.button
           className="buy-btn"
           onClick={handleNavigation}
           whileTap={{ scale: 0.98 }}

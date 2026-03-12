@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion as Motion, type Variants } from "framer-motion";
-import './notFound.css';
-import { BsFillQuestionCircleFill } from 'react-icons/bs';
+import "./notFound.css";
+import { BsFillQuestionCircleFill } from "react-icons/bs";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -16,51 +17,55 @@ const containerVariants: Variants = {
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
 const NotFound = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="not-found-wrapper">
-      <Motion.div 
+      <Motion.div
         className="not-found-content"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Animated Icon Box */}
-        <Motion.div 
+        <Motion.div
           className="icon-box"
-          animate={{ 
+          animate={{
             y: [0, -10, 0],
           }}
-          transition={{ 
-            duration: 4, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
           }}
         >
-          <span className="question-mark"><BsFillQuestionCircleFill /></span>
+          <span className="question-mark">
+            <BsFillQuestionCircleFill />
+          </span>
         </Motion.div>
 
         {/* Text Content */}
         <Motion.h1 variants={itemVariants}>Page not found!</Motion.h1>
-        
+
         <Motion.p variants={itemVariants}>
           The page you're looking for does not exist or has <br /> been moved.
         </Motion.p>
 
         {/* Button */}
         <Motion.div variants={itemVariants}>
-          <Motion.button 
+          <Motion.button
             className="go-home-btn"
             whileHover={{ scale: 1.02, backgroundColor: "#333" }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => window.location.href = '/'}
+            onClick={() => navigate("/")}
           >
             Go Home
           </Motion.button>

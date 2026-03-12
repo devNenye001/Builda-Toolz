@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion as Motion, AnimatePresence, Variants } from "framer-motion";
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -39,7 +39,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Add glass effect on scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -56,8 +55,6 @@ const Navbar = () => {
       className={`navbar ${scrolled ? "scrolled" : ""}`}
     >
       <div className="nav-container">
-        
-        {/* Logo */}
         <Motion.div
           className="logo-section"
           initial={{ opacity: 0 }}
@@ -80,10 +77,10 @@ const Navbar = () => {
               whileHover={{ y: -3 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <a href={link.href} className="nav-link">
+              <Link to={link.href} className="nav-link">
                 {link.name}
                 <span className="underline" />
-              </a>
+              </Link>
             </Motion.li>
           ))}
         </ul>
@@ -91,13 +88,13 @@ const Navbar = () => {
         {/* Desktop CTA */}
         <div className="cta-desktop">
           <Link to="/contact">
-          <Motion.button
-            className="contact-btn"
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Us
-          </Motion.button>
+            <Motion.button
+              className="contact-btn"
+              whileHover={{ scale: 1.07 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us
+            </Motion.button>
           </Link>
         </div>
 
@@ -134,19 +131,19 @@ const Navbar = () => {
             <ul className="mobile-nav-links">
               {navLinks.map((link) => (
                 <Motion.li key={link.name} variants={linkVariants}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </Motion.li>
               ))}
 
               <Motion.li variants={linkVariants}>
-                <button className="contact-btn mobile-btn">
-                 Contact Us
-                </button>
+                <Link to="/contact" className="contact-btn mobile-btn">
+                  Contact Us
+                </Link>
               </Motion.li>
             </ul>
           </Motion.div>
